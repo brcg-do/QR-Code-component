@@ -1,0 +1,80 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+  --typeface-outfit: "Outfit";
+  --font-size-title: 1.375rem;
+  --font-weight-title: 700;
+  --line-height-title: 1.2;
+  --font-size-description: 0.938rem;
+  --font-weight-description: 400;
+  --line-height-description: 1.4;
+  --letter-spacing-description: 0.013em;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-500: 2.5rem;
+}
+
+/* global styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--slate-300);
+  font-family: var(--typeface-outfit);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: var(--spacing-200);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* QR Code component */
+
+.card {
+  background-color: var(--white);
+  max-width: 20rem;
+  padding: var(--spacing-200) var(--spacing-200) var(--spacing-500);
+  border-radius: 1.25rem;
+  box-shadow: 0 25px 25px 0 hsla(0 0% 0% / 4.77%);
+}
+
+.card__image {
+  border-radius: 0.625rem;
+  display: block; /* Removes the default bottom space from the inline */
+  margin-bottom: var(--spacing-300);
+}
+
+.card__content {
+  padding: 0 var(--spacing-200);
+  text-align: center;
+}
+
+.card__title {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  line-height: var(--line-height-title);
+  color: var(--slate-900);
+  margin-bottom: var(--spacing-200);
+}
+
+.card__description {
+  font-size: var(--font-size-description);
+  font-weight: 400;
+  line-height: var(--line-height-description);
+  letter-spacing: var(--letter-spacing-description);
+  color: var(--slate-500);
+  margin-bottom: 0;
+}
